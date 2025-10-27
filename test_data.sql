@@ -1,12 +1,4 @@
 -- =====================================================
--- TEST DATA FOR ORDER MANAGEMENT SYSTEM
--- This file contains sample data to populate the database
--- =====================================================
-
--- =====================================================
--- INSERT CATEGORIES
--- Building the hierarchical structure from the task example
--- =====================================================
 
 INSERT INTO categories (id, name, parent_id) VALUES
 (1, 'Бытовая техника', NULL),
@@ -22,8 +14,6 @@ INSERT INTO categories (id, name, parent_id) VALUES
 (11, 'Моноблоки', 7);
 
 -- =====================================================
--- INSERT PRODUCTS
--- =====================================================
 
 INSERT INTO products (name, quantity, price, category_id) VALUES
 ('Стиральная машина Samsung WD80T4046EE', 5, 45000.00, 2),
@@ -36,8 +26,6 @@ INSERT INTO products (name, quantity, price, category_id) VALUES
 ('Моноблок Apple iMac 24', 2, 150000.00, 11);
 
 -- =====================================================
--- INSERT CLIENTS
--- =====================================================
 
 INSERT INTO clients (name, address) VALUES
 ('ООО "Ромашка"', 'г. Москва, ул. Ленина, д. 1, кв. 50'),
@@ -45,8 +33,6 @@ INSERT INTO clients (name, address) VALUES
 ('ЗАО "Инвестпром"', 'г. Екатеринбург, ул. Октябрьской революции, д. 15'),
 ('ООО "Торгсервис"', 'г. Новосибирск, пр. Ленина, д. 25');
 
--- =====================================================
--- INSERT ORDERS
 -- =====================================================
 
 INSERT INTO orders (client_id, order_date) VALUES
@@ -56,8 +42,6 @@ INSERT INTO orders (client_id, order_date) VALUES
 (3, '2025-10-20 16:20:00'),
 (4, '2025-10-22 11:00:00');
 
--- =====================================================
--- INSERT ORDER ITEMS
 -- =====================================================
 
 INSERT INTO order_items (order_id, product_id, quantity, price) VALUES
@@ -81,6 +65,4 @@ INSERT INTO order_items (order_id, product_id, quantity, price) VALUES
 (5, 6, 2, 65000.00),
 (5, 1, 1, 45000.00);
 
--- =====================================================
--- END OF TEST DATA
 -- =====================================================
